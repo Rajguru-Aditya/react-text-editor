@@ -1,21 +1,15 @@
-import React, { useState } from "react";
 // import "./App.css";
 import Navbar from "./components/Navbar";
-import TextArea from "./components/TextArea";
+// import TextArea from "./components/TextArea";
+import About from "./components/About";
 
 function App() {
-  const [text, setText] = useState("");
-
-  const handleChange = (e) => {
-    e.preventDefault();
-    setText(text.toUpperCase());
-  };
-
   return (
     <div className="App">
       <Navbar />
       <div className="container">
-        <TextArea heading="Enter your text below..." />
+        {/* <TextArea heading="Enter your text below..." /> */}
+        <About />
       </div>
     </div>
   );

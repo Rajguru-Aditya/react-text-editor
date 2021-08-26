@@ -25,14 +25,6 @@ function TextArea(props) {
     }
   };
 
-  // const italic = () => {
-  //   if (italicText) {
-  //     setTtalicText(false);
-  //   } else {
-  //     setTtalicText(true);
-  //   }
-  // };
-
   const clear = () => {
     setText("");
   };
@@ -42,10 +34,18 @@ function TextArea(props) {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        color: props.mode === "dark" ? "white" : "#2D3F50",
+      }}
+    >
       <h1>{props.heading}</h1>
       <div className="mb-3">
         <textarea
+          style={{
+            backgroundColor: props.mode === "dark" ? "#2D3F50" : "white",
+            color: props.mode === "dark" ? "white" : "#2D3F50",
+          }}
           value={text}
           onChange={handleChange}
           className="form-control"
@@ -63,7 +63,12 @@ function TextArea(props) {
         </button>
       </CopyToClipboard>
 
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          color: props.mode === "dark" ? "white" : "#2D3F50",
+        }}
+      >
         <h2>Your text summary</h2>
         <p>Character count: {text.length}</p>
         <p>Word count: {text.split(" ").length}</p>
@@ -73,7 +78,7 @@ function TextArea(props) {
         {boldText ? (
           <p style={{ fontWeight: "bold" }}>{text}</p>
         ) : (
-          <p>{text}</p>
+          <p>{text.length > 0 ? text : "Enter your text to preview it here"}</p>
         )}
 
         {/* {italicText ? (

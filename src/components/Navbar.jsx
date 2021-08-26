@@ -1,9 +1,11 @@
 import React from "react";
 
-function Navbar() {
+function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             Navbar
@@ -33,7 +35,7 @@ function Navbar() {
               </li>
             </ul>
             <form className="d-flex">
-              <input
+              {/* <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
@@ -41,7 +43,25 @@ function Navbar() {
               />
               <button className="btn btn-outline-success" type="submit">
                 Search
-              </button>
+              </button> */}
+              <div
+                className={`form-check form-switch text-${
+                  props.mode === "light" ? "dark" : "light"
+                }`}
+              >
+                <input
+                  onClick={props.toggleMode}
+                  className="form-check-input"
+                  type="checkbox"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  className="form-check-label"
+                  htmlFor="flexSwitchCheckDefault"
+                >
+                  Enable dark mode
+                </label>
+              </div>
             </form>
           </div>
         </div>

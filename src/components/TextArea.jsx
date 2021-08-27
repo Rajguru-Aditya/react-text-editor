@@ -36,15 +36,15 @@ function TextArea(props) {
   return (
     <div
       style={{
-        color: props.mode === "dark" ? "white" : "#2D3F50",
+        color: props.mode === "dark" ? "white" : "#0A1931",
       }}
     >
       <h1>{props.heading}</h1>
       <div className="mb-3">
         <textarea
           style={{
-            backgroundColor: props.mode === "dark" ? "#2D3F50" : "white",
-            color: props.mode === "dark" ? "white" : "#2D3F50",
+            backgroundColor: props.mode === "dark" ? "#0A1931" : "white",
+            color: props.mode === "dark" ? "white" : "#0A1931",
           }}
           value={text}
           onChange={handleChange}
@@ -66,7 +66,7 @@ function TextArea(props) {
       <div
         className="container"
         style={{
-          color: props.mode === "dark" ? "white" : "#2D3F50",
+          color: props.mode === "dark" ? "white" : "#0A1931",
         }}
       >
         <h2>Your text summary</h2>

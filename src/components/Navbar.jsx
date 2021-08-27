@@ -34,35 +34,93 @@ function Navbar(props) {
                 </a>
               </li>
             </ul>
-            <form className="d-flex">
-              {/* <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button> */}
+
+            <div className="d-flex">
               <div
-                className={`form-check form-switch text-${
-                  props.mode === "light" ? "dark" : "light"
-                }`}
+                onClick={() => {
+                  props.toggleDMode("primary");
+                }}
+                className="bg-primary rounded mx-2"
+                style={{
+                  heigth: "30px",
+                  width: "30px",
+                  cursor: "pointer",
+                  border: "1px solid black",
+                }}
               >
-                <input
-                  onClick={props.toggleMode}
-                  className="form-check-input"
-                  type="checkbox"
-                  id="flexSwitchCheckDefault"
-                />
-                <label
-                  className="form-check-label"
-                  htmlFor="flexSwitchCheckDefault"
-                >
-                  Enable dark mode
-                </label>
+                `
               </div>
-            </form>
+              <div
+                onClick={() => {
+                  props.toggleDMode("danger");
+                }}
+                className="bg-danger rounded mx-2"
+                style={{
+                  heigth: "30px",
+                  width: "30px",
+                  cursor: "pointer",
+                  border: "1px solid black",
+                }}
+              >
+                `
+              </div>
+              <div
+                onClick={() => {
+                  props.toggleDMode("success");
+                }}
+                className="bg-success rounded mx-2"
+                style={{
+                  heigth: "30px",
+                  width: "30px",
+                  cursor: "pointer",
+                  border: "1px solid black",
+                }}
+              >
+                `
+              </div>
+              <div
+                onClick={() => {
+                  props.toggleDMode("warning");
+                }}
+                className="bg-warning rounded mx-2"
+                style={{
+                  heigth: "30px",
+                  width: "30px",
+                  cursor: "pointer",
+                  border: "1px solid black",
+                }}
+              >
+                `
+              </div>
+              <div
+                onClick={() => {
+                  props.toggleDMode("light");
+                }}
+                className="bg-light rounded mx-2"
+                style={{
+                  heigth: "30px",
+                  width: "30px",
+                  cursor: "pointer",
+                  border: "1px solid black",
+                }}
+              >
+                `
+              </div>
+              <div
+                onClick={() => {
+                  props.toggleDMode("dark");
+                }}
+                className="bg-dark rounded mx-2"
+                style={{
+                  heigth: "30px",
+                  width: "30px",
+                  cursor: "pointer",
+                  border: "1px solid black",
+                }}
+              >
+                `
+              </div>
+            </div>
           </div>
         </div>
       </nav>
